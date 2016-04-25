@@ -6,13 +6,17 @@ void main()
 {
     FILE *fp;
     char s[max],a[max],ch;
-    int i=0,check=0;
+    int i=0,check=0,count;
     fp=fopen("eg.txt","r");
-    while(1)
+    fscanf(fp,"%d",&count);
+    while(count>-1)
     {
         ch=fgetc(fp);
-        if(ch==EOF)
-        break;
+        if(ch=='\n')
+        {
+        printf("\n");
+        count--;
+        }
         else
         printf("%c",ch);
     }

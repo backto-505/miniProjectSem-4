@@ -9,6 +9,7 @@ void main()
     int i=0,check=0,count;
     fp=fopen("eg.txt","r");
     fscanf(fp,"%d",&count);
+    printf("%d",count);
     while(count>-1)
     {
         ch=fgetc(fp);
@@ -22,5 +23,4 @@ void main()
     }
     fclose(fp);
     getch();
-
 }
